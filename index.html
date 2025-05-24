@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login || Chalkboard analysis</title>
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body
+    class="bg-[url('https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover flex items-center justify-center h-screen text-white"
+  >
+    <div
+      class="h-[700px] w-[950px] flex flex-row items-center justify-center rounded-lg p-8 bg-transparent fontclass"
+    >
+      <img
+        src="./bg_board.jpg"
+        class="absolute h-[700px] w-[950px] rounded-lg -z-1 brightness-125"
+      />
+
+      <div
+        class="flex absolute flex-col border-2 border-dashed rounded-lg p-8 mr-90"
+      >
+        <h2 class="text-xl cursor-pointer" id="logbtn">Login</h2>
+        <hr class="mt-5 mb-5 border-2 border-dashed w-full" />
+        <h2 class="cursor-pointer" id="regbtn">Register</h2>
+      </div>
+      <!--login form-->
+      <div class="absolute ml-60 bg-transparent p-8 rounded w-96" id="login">
+        <h1 class="text-7xl font-bold mb-6 text-center">Login</h1>
+        <form onsubmit="onLogin(event)">
+          <div class="relative mb-4">
+            <input
+              type="email"
+              id="username"
+              name="username"
+              placeholder="Email"
+              autocomplete="off"
+              required
+              class="w-full border-2 border-dashed border-gray-300 rounded-md pt-2 pb-2 px-2 focus:outline-none focus:border-none focus:ring-1"
+            />
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+              class="w-full border-2 border-dashed border-gray-300 rounded-md pt-2 pb-2 px-2 focus:outline-none focus:border-none focus:ring-1"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-white text-2xl font-bold text-[#385043] py-2 rounded hover:scale-96 cursor-pointer transition-all ctmfont"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+      <!--register form-->
+      <div
+        class="absolute ml-60 p-8 rounded w-96"
+        id="register"
+        style="display: none"
+      >
+        <h1 class="text-7xl font-bold mb-6 text-center">Register</h1>
+        <form onsubmit="onRegister(event)">
+          <div class="relative mb-4">
+            <input
+              type="email"
+              id="regusername"
+              name="reguser"
+              placeholder="Email/Username"
+              autocomplete="off"
+              required
+              class="w-full border-2 border-dashed border-gray-300 rounded-md pt-2 pb-2 px-2 focus:outline-none focus:border-none focus:ring-1"
+            />
+          </div>
+          <div class="relative mb-4">
+            <input
+              type="password"
+              id="regpassword"
+              name="regpass"
+              placeholder="Password"
+              required
+              class="w-full border-2 border-dashed border-gray-300 rounded-md pt-2 pb-2 px-2 focus:outline-none focus:border-none focus:ring-1"
+            />
+          </div>
+          <div class="flex justify-between mb-2">
+            <input type="radio" name="roles" value="1" /><label for="roles"
+              >Admin</label
+            >
+            <input type="radio" name="roles" value="2" /><label for="roles"
+              >Teacher</label
+            >
+            <input type="radio" name="roles" value="3" /><label for="roles"
+              >Student</label
+            >
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-white text-2xl font-bold text-[#385043] py-2 rounded hover:scale-96 cursor-pointer transition-all ctmfont"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

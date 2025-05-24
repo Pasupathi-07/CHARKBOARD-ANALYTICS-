@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.fontclass {
+  font-family: "Cabin Sketch", cursive;
+  font-weight: 400;
+
+  font-size: 20px;
+  color: white;
+}
+
+.ctmfont {
+  background: url("chalk.jpg");
+  background-position: center;
+  opacity: 0.8;
+  font-family: "Chalkduster", cursive;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.navbar a {
+  position: relative;
+  padding: 15px 0;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  height: 2px;
+  width: 0;
+  background-color: #ff0059;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #ff0059;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  max-height: 50%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.612); /* dark overlay */
+  z-index: 2;
+}
+
+.hero-content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  color: white;
+  text-align: center;
+  z-index: 3;
+}
+
+.ctmimg1::after,
+.ctmimg2::after,
+.ctmimg3::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #0000006b, rgba(0, 0, 0, 0.94));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ctmimg1::after {
+  content: "Ruthuvarshan";
+}
+.ctmimg2::after {
+  content: "Pasupathi";
+}
+.ctmimg3::after {
+  content: "Sukant";
+}
+
+.ctmimg1:hover::after,
+.ctmimg2:hover::after,
+.ctmimg3:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 300ms all;
+}
+
+.border-highlight {
+  border: 4px #facc15 solid ; /* Tailwind's sky-400 or customize */
+}
+
+
+.navbar-link {
+  position: relative;
+  padding-bottom: 5px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ff0059;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::before {
+  width: 100%;
+}
+
+.navbar-link:hover {
+  color: #ff0059;
+}
+#learn-more {
+  color: black;
+}
+#learn-more::before {
+  width: 0%;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out;
+}
+
+.animate-slide-left {
+  animation: slide-left 1s ease-out;
+}
+
+.animate-slide-right {
+  animation: slide-right 1s ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 1s ease-out;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out;
+}
+
+.animate-slide-left {
+  animation: slide-left 1s ease-out;
+}
+
+.animate-slide-right {
+  animation: slide-right 1s ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 1s ease-out;
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-slide-up {
+  animation: fade-slide-up 1s ease-out forwards;
+}
+
+@keyframes fade-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-fade-slide-left {
+  animation: fade-slide-left 1s ease-out forwards;
+}
+
+@keyframes fade-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-fade-slide-right {
+  animation: fade-slide-right 1s ease-out forwards;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate-pop {
+  animation: pop 0.8s ease-out forwards;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-link.active {
+  color: #facc15; /* yellow-400 */
+  border-bottom: 2px solid #facc15;
+  padding-bottom: 4px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Optional: Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+/*
+.cabin-sketch-regular {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cabin-sketch-bold {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+*/
